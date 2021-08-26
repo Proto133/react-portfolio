@@ -99,18 +99,6 @@ p {
   color: #ffffff;
 }
 
-.widecard {
-  border: 0px solid #9a9b9c;
-  display: flex;
-  margin: 30px 0px 30px 0px;
-}
-
-.widecard:hover {
-  color: #1b1d20;
-  background-color: #ffffff;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
-}
-
 .active {
   font-weight: bolder;
 }
@@ -130,6 +118,14 @@ nav a {
   margin: .25rem;
   font-size: var(--fontsize-nav);
   text-align: center;
+  padding: .25rem 1rem;
+}
+
+nav a:hover {
+  transition: all  .3s ease-in-out;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+  background-color: rgba(255, 255, 255, 0.596);
+  color: rgb(0, 0, 0);
 }
 
 .social {
@@ -189,7 +185,7 @@ p {
   flex: 0 0 30%;
   min-height: 400px;
   /* max-width: 300px; */
-  background: rgba(255, 255, 255, .95);
+  background: rgba(43, 43, 43, 0.95);
   text-decoration: none;
   color: #444;
   box-shadow: 0 2px 15px rgb(255, 255, 255);
@@ -201,23 +197,25 @@ p {
   position: relative;
   top: 0;
   transition: all .1s ease-in;
-  padding: 0;
+  padding: .5rem;
 }
 
 .project-card h2 {
   margin-bottom: 0;
-  color: black;
+  color:rgba(132, 124, 252, 1)
 }
 
 .project-summary {
-  height: 100px;
+  color: white;
+  height: 80px;
   overflow-y: auto;
 }
 
 .type-shield {
   width: 25%;
-  margin: 0 37.5%;
-  text-align: center;
+  margin: 0;
+  float: right;
+  text-align: right;
 }
 
 .thumb img {
@@ -236,7 +234,7 @@ p {
 
 .badge-list {
   display: flex;
-  gap: 1rem;
+  gap: .25rem;
   flex-flow: row wrap;
   justify-content: space-evenly;
   vertical-align: center;
@@ -270,13 +268,13 @@ p {
   text-align: center;
   font-variant: small-caps;
   background-color: lightgrey;
-  box-shadow: 0 2px 5px rgb(102, 51, 126)
+  box-shadow: 0 2px 5px #66337e
 
 } 
 .contact-card div i{
   font-size:2rem;
   padding:.5rem;
-  color: #444;
+  color: #f78922;
 }
 .contact-card div p{
   color: #444;

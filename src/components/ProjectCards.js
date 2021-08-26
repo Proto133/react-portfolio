@@ -1,4 +1,3 @@
-import { Tag, Affix } from 'antd';
 import React from 'react';
 import Badges from './Badges';
 export default function ProjectCards(data){  
@@ -18,9 +17,9 @@ export default function ProjectCards(data){
         <div className="noselect thumb">
             <img src={imgsrc} alt={`${name} Screenshot`}/>
         </div>
+            <img className="type-shield" src={shieldSrc} alt={`${type} badge`}></img>
         <article className="proj">
             <h2>{name}</h2>
-            <img className="type-shield" src={shieldSrc} alt={`${type} badge`}></img>
             <div className="project-summary">{summary}</div>
             <br />
         </article>

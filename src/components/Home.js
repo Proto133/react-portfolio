@@ -7,7 +7,7 @@ export default function Home(){
     const {name, imgsrc, contact} = aboutData
     return (
             <div className="condiv home">
-                <img src={imgsrc} className="profilepic"></img>
+                <img src={imgsrc} alt={`${name}'s headshot`} className="profilepic"></img>
                 <ReactTypingEffect className="typingeffect" text={[`I am ${name}`,`I am a web developer`]} speed={100} eraseDelay={700}/>
                 <Social data={contact}/>
             </div>
