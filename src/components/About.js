@@ -1,14 +1,19 @@
 import React from 'react'
-import { Card } from 'antd';
+import Contact from './Contact'
 import aboutData from '../data/aboutData'
 
 export default function About(){
 return (
-    <div className="aboutCard">
-        <Card title="About Peter" style={{flex: "0 0 60%" }}>
-            <img src={aboutData.imgsrc} alt="Headshot" />
+        <div className="condiv">
+            <h1 className="subtopic">About Me</h1>
+            <h4>Hey there,</h4>
+            <h2>I'm Peter Roto.</h2>
+            <h3>Full Stack Web <u>Developer</u> | UI/UX <u>Designer</u></h3>
+        <br></br>
             <p>{aboutData.bio}</p>
-        </Card>
-    </div>
-)
-}
+        <br></br>
+            <h4> Get In Touch:</h4>
+            <Contact data={aboutData.contact} />
+        </div>
+        )
+        }

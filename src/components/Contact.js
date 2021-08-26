@@ -1,5 +1,5 @@
 import React from 'react';
-export default function Contact(data){
+export default function Contact({data}){
 const contact = data.map((method, index) =>{
      return(
      <div key={index} id={method.name}>
@@ -12,7 +12,7 @@ const contact = data.map((method, index) =>{
  })
 
  return( 
-     <div className="card">
+     <div className="contact-card">
          {contact}
      </div>
  )}

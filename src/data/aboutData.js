@@ -5,11 +5,11 @@ let AboutData = {
     contact:[{
         name:"github",
         url:"https://github.com/proto133",
-        icon:"fa fa-github"
+        icon:"fab fa-github"
     },{
         name: "linkedin",
         url:"https://www.linkedin.com/in/Peterroto",
-        icon:"fa fa-linkedin"
+        icon:"fab fa-linkedin-in"
     },{
         name: "Personal Website",
         url:"https://peterroto.com",
