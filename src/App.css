@@ -1,38 +1,54 @@
-.App {
+body{
+  background-color: rgb(110, 110, 110)
+}
+
+nav {
+  display: flex; 
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  width:90%;
+  margin:0 5%;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+nav a {
   color: white;
+  text-decoration: none;
+  margin: .25rem;
+  font-size: 1.5vw;
 }
 
-.App-link {
-  color: #61dafb;
+.project--container{
+    display: flex;
+    flex-flow:row wrap;
+    justify-content: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.project-card{
+  height: 400px;
+  max-width: 300px;
+  background: rgba(255, 255, 255, .95);
+  text-decoration: none;
+  color: #444;
+  box-shadow: 0 2px 5px rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  text-align: center;
+  height: fit-content;
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+  padding: 0 0 5% 0;
+}
+ .ant-tag{
+   /* background-color: aqua; */
+   flex: 0 0 100%;
+ }
+
+.thumb img{
+  max-width: 250px;
+  max-height: 250px;
+  width:100%;
+  height: auto;
 }
