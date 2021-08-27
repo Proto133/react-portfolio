@@ -13,12 +13,12 @@ function App() {
      <Router>
        <nav>
          <Link to="/home">Home</Link>
-         <Link to="/projects">Projects!</Link>
+         <Link to="/projects">Projects</Link>
          <Link to="/about">About</Link>
        </nav>
          <Switch>
           <Route exact path="/">
-            <Redirect path="/home"/>
+            <Redirect to="/home"/>
            </Route>
              <Route path="/home">
                  <Home />
