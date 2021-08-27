@@ -1,4 +1,4 @@
-import {Link, Switch, BrowserRouter as Router, Route} from 'react-router-dom';
+import {Link, Switch, BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
 import Home from './components/Home';
 import About from './components/About';
 import Projects from './components/Projects';
@@ -17,7 +17,13 @@ function App() {
          <Link to="/about">About</Link>
        </nav>
          <Switch>
-             <Route exact path="/">
+         <Route exact path='/react-portfolio'>
+             <Redirect to='/home'></Redirect>
+           </Route>
+           <Route exact path='/'>
+             <Redirect to='/home'></Redirect>
+           </Route>
+             <Route path="/home">
                  <Home />
              </Route>
              <Route path="/about">

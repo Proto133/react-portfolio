@@ -75,7 +75,7 @@ let projectData = [{
     summary: `A simple note-taking application using nodejs leveraging express as server-side middleware and routing framework.
     \n\n It is important to note that this application simply uses a JSON file as the database and is more of a conceptual application than a real solution.`,
     tools: [JS, CSS,NODE,HERO,HTML],
-    imgsrc: '/images/Note-O-Rama.png',
+    imgsrc: './images/Note-O-Rama.png',
     url: 'https://gentle-sierra-10975.herokuapp.com/',
     type: 'Solo'
 }, {
