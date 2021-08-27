@@ -12,24 +12,24 @@ function App() {
     <div className="header">
      <Router>
        <nav>
-         <Link to="/">Home</Link>
-         <Link to="/projects">Projects</Link>
-         <Link to="/about">About</Link>
+         <Link to="/react-portfolio/">Home</Link>
+         <Link to="/react-portfolio/projects">Projects</Link>
+         <Link to="/react-portfolio/about">About</Link>
        </nav>
          <Switch>
-         <Route exact path='/react-portfolio'>
-             <Redirect to='/home'></Redirect>
+         <Route exact path='/react-portfolio/'>
+             <Redirect to='/react-portfolio/home'></Redirect>
            </Route>
            <Route exact path='/'>
-             <Redirect to='/home'></Redirect>
+             <Redirect to='/react-portfolio/home'></Redirect>
            </Route>
-             <Route path="/home">
+             <Route path="/react-portfolio/home">
                  <Home />
              </Route>
-             <Route path="/about">
+             <Route path="/react-portfolio/about">
                 <About data={aboutData} />    
              </Route>
-             <Route path="/projects">
+             <Route path="/react-portfolio/projects">
                 <Projects data={projectData}/>
              </Route>
              </Switch>
