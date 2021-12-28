@@ -1,19 +1,32 @@
 import React from 'react';
 import Badges from './Badges';
-export default function ProjectCards(regData){  
+import { Carousel } from 'antd';
+
+const contentStyle = {
+  height: '160px',
+  color: '#fff',
+  lineHeight: '160px',
+  textAlign: 'center',
+  background: 'violet',
+};
+
+
+
+const FeaturedCards =({data})=>{
     let btools;
     let shieldSrc;
- let projects =regData.data.map((project) => {  
-        const { name, summary, type, tools, url, imgsrc, index, featured} = project;
+
+    let cards = data.map(project =>{
+        const {imgsrc, name, index, summary, type, tools, url} =project;
         btools = tools
         if (type === 'Solo'){
             shieldSrc = `https://img.shields.io/badge/${type}_Project-blue`;
         } else{
             shieldSrc = `https://img.shields.io/badge/${type}_Project-orange`;
         }
-if (featured === false){
-    let regProjects = 
-    <div className="noselect project-card" key={index}>
+    return (
+        <div className="featured--card">
+        <div className="noselect project-card" key={index}>
         <div className="noselect thumb">
             <img src={imgsrc} alt={`${name} Screenshot`}/>
         </div>
@@ -31,22 +44,17 @@ if (featured === false){
             </div>
         </div>
     </div>
-    return regProjects;
-        }
-        else{ 
-
-         let featuredProjects = 
-            <div className="noselect project-card" key={index}>
-            <div className="noselect thumb">
-                <img src={imgsrc} alt={`${name} Screenshot`}/>
-            </div>
-                <img className="type-shield" src={shieldSrc} alt={`${type} badge`}></img>
-            <article className="proj">
-                <h2>{name}</h2>
-            </article>
-            </div>
-         return featuredProjects; 
-        }
-    })
-        return projects
+</div>
+    )
+})
+return (
+    <div className="feature-frame">
+        <h2>Featured Projects</h2>
+    <section id='featured'>
+    {cards}
+    </section>
+    </div>
+)
 }
+
+export default FeaturedCards;

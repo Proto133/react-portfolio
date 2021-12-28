@@ -42,23 +42,29 @@ const HERO ={
     tool:'MySQL', 
     color:'9932CC'
 }
+const GRAPHQL ={
+    tool: 'GraphQL',
+    color: 'b6b6b6'
+}
 
 let projectData = [{
     index: 0,
     name: 'Bootcamp Box',
     summary: `A helpful dashboard for use in a web-development environment. Integrates multiple links, sites, and tools that are frequently used within a web-development lifestyle.`,
     tools: [HTML,JS,NODE,CSS,FB],
-    imgsrc: '/react-portfolio/images/BootCampBox.png',
+    imgsrc: '../images/BootCampBox.png',
     url: 'http://nubootcampbox.xyz',
-    type: 'Group'
+    type: 'Group',
+    featured: true,
 }, {
     index: 1,
     name: 'TrashParty ',
     summary: `NFT-style Webapp (for entertainment purposes): A website where once a day you open a pack of random stuff (data we collect from different API's). In the packs could be anywhere from songs to movies to pokemon cards, really any type of data we can get from an API and have time to implement. You can trade your "trash" with other users till you get items you actually like.`,
     tools: [JS,HB,NODE,CSS,FB,EXP,SESS],
-    imgsrc: '/react-portfolio/images/TrashParty.png',
+    imgsrc: '../images/TrashParty.png',
     url: 'http://trashparty.xyz',
-    type: 'Group'
+    type: 'Group',
+    featured: true,
 }, {
     index: 2,
     name: 'WeatherBoard',
@@ -66,33 +72,47 @@ let projectData = [{
             This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.
             `,
     tools: [JS,CSS,{tool:'LocalStorage',color:'000000'}, HTML],
-    imgsrc: '/react-portfolio/images/WeatherBoard.png',
+    imgsrc: '../images/WeatherBoard.png',
     url: 'https://proto133.github.io/WeatherBoard/',
-    type: 'Solo'
+    type: 'Solo',
+    featured: false,
 }, {
     index: 3,
     name: 'Note-O-Rama',
     summary: `A simple note-taking application using nodejs leveraging express as server-side middleware and routing framework.
     \n\n It is important to note that this application simply uses a JSON file as the database and is more of a conceptual application than a real solution.`,
     tools: [JS, CSS,NODE,HERO,HTML],
-    imgsrc: '/react-portfolio/images/Note-O-Rama.png',
+    imgsrc: '../images/Note-O-Rama.png',
     url: 'https://gentle-sierra-10975.herokuapp.com/',
-    type: 'Solo'
+    type: 'Solo',
+    featured: true,
 }, {
     index: 4,
     name: 'Talkio',
     summary: `This web application is a simple "TechBlog". Log in, blog, comment and view comments.`,
     tools: [NODE, EXP, HB,MySQL,JS],
-    imgsrc: '/react-portfolio/images/Talkio.png',
+    imgsrc: '../images/Talkio.png',
     url: 'http://talkio-2021.herokuapp.com/',
-    type: 'Solo'
+    type: 'Solo',
+    featured: false,
 },{
     index: 5,
     name: 'FitLogr',
     summary: `When you get home from the gym, go ahead and fire up your computer, launch FitLog and begin keeping track of your workouts! Never before has it been this easy to keep track of exercises and pursue physical wellbeing! Simply follow Fitlog's intuitive design and you're on your way to the body of a Greek Deity!`,
     tools: [NODE, EXP, HERO,MONGO,JS],
-    imgsrc: '/react-portfolio/images/Fitlogr.png',
+    imgsrc: '../images/Fitlogr.png',
     url: 'http://fitlogr.herokuapp.com/',
-    type: 'Solo'}]
+    type: 'Solo',
+    featured: false,
+},{
+    index:6,
+    name:'Vicebrary',
+    summary:`A web app that allows the user to catalogue their personal vices, by adding from or adding to the community driven database (currently only Wine is supported).`,
+    tools:[JS, NODE, EXP, GRAPHQL, MONGO, HERO],
+    imgsrc:'../images/Vicebrary.png',
+    url:'http://vicebrary.herokuapp.com/',
+    type: 'Group',
+    featured: true
+}]
 
 export default projectData;

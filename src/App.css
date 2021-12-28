@@ -5,6 +5,7 @@
   --condiv-flex: 6;
   --fontsize-p: 1.2rem;
   --fontsize-nav: calc(2rem + .06vw);
+  --fontsize-section-title: calc(3rem + .05vw);
   --typing-font: 3rem;
 }
 
@@ -23,6 +24,26 @@ body {
   display: flex;
   width: 100vw;
   min-height: 100vh;
+}
+
+#featured{
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  overflow-x: scroll;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0, .5);
+}
+.featured--card{
+  flex: 0 0 30%;
+  margin: 0 10rem;
+}
+.feature-frame{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 5% 10%;
+  background-image: url('images/TensorBox357.png');
+  background-repeat:repeat-x;
 }
 
 nav {
@@ -162,18 +183,22 @@ p {
 }
 
 .project-page {
-  background-image: url(/react-portfolio/images/code.png);
-  background-size: cover;
+background-color: #767676;
   width: auto;
-  padding: 3.5rem;
+  /* padding: 3.5rem; */
 }
 
 .project-page h2 {
-  text-align: center;
+  margin: 0 0 3rem 0; 
+  /* text-align: center; */
   color: white;
+  font-size: var(--fontsize-section-title);
+  text-shadow: 3px 0px 5px rgba(0, 0, 0, 1);
+
 }
 
 .project--container {
+  margin-top:2rem;
   display: flex;
   flex-flow: row wrap;
   justify-content: space-around;
@@ -288,6 +313,7 @@ p {
 
   .App {
     flex-direction: column;
+    overflow-x:hidden;
   }
 
   .sidebar {
