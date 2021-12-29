@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useState} from 'react';
 import FeaturedCards from '../components/FeaturedCards';
 import ProjectCards from '../components/ProjectCards';
 export default function Projects({data}){
-
+    const {isHovering, setIsHovering} = useState(false)
     let featuredData=[]
     let regData=[]
 

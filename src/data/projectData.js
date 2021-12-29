@@ -46,7 +46,18 @@ const GRAPHQL ={
     tool: 'GraphQL',
     color: 'b6b6b6'
 }
-
+const INQ={
+    tool:'Inquirer',
+    color: 'bac72a'
+}
+const NPM = {
+    tool:'NPM',
+    color: 'c73f2a'
+}
+const JQ = {
+    tool:'JQuery',
+    color:'34ebab'
+}
 let projectData = [{
     index: 0,
     name: 'Bootcamp Box',
@@ -113,6 +124,63 @@ let projectData = [{
     url:'http://vicebrary.herokuapp.com/',
     type: 'Group',
     featured: true
-}]
+},{
+    index:7,
+    name:'WritemeReadme',
+    summary:`A console application that walks the users through creating a professional looking readme`,
+    tools:[JS, NODE, INQ, NPM],
+    imgsrc:'../images/code.png',
+    url:'https://www.npmjs.com/package/writemereadme',
+    type: 'Solo',
+    featured: false
+
+},{
+    index:8,
+    name:'More Coming Soon',
+    summary:`I'm always working on learning and becoming a better developer.`,
+    tools:[JS, NODE, FB, HTML,CSS, MONGO, EXP, GRAPHQL, HERO, HB, SESS, NPM],
+    imgsrc:'../images/TensorBox292.png',
+    url:'https://peterroto.com',
+    // type: 'Solo',
+    featured: true
+},{
+    index:9,
+    name:'CSS Cheatseet',
+    summary:`A static site that helps remind new devs about some CSS features that are sometimes difficult to remember.`,
+    tools:[HTML,CSS],
+    imgsrc:'../images/CSSCheatsheet.png',
+    url:'https://proto133.github.io/CSS_CheatSheet/',
+    type: 'Solo',
+    featured: false
+},{
+    index:10,
+    name:'Code Quiz',
+    summary:`The Javascript Code Quiz is a fun and interactive way to test your basic javascript code skills. With 15 questions, it will challenge you as you progress through the quiz. Complete with localStorage calls, this application invites you to challenge your friends to see who can score the highest in the shorest amount of time. The fun could last for about 20 minutes . . . there's only 15 questions. However; the leaderboard updates to the most recent 3 users for bragging rights. It's a great way decent to brush up on those coding skills when there isn't anything else better to do ;)`,
+    tools:[JS, HTML,CSS],
+    imgsrc:'../images/CodeQuiz.png',
+    url:'https://proto133.github.io/Code_Quiz/',
+    type: 'Solo',
+    featured: false
+},{
+    index:11,
+    name:'WorkDay Scheduler',
+    summary:`Single page scheduling application that allows a user to save events for each hour of the day. This app will run in the browser and feature dynamically updated HTML and CSS powered by jQuery.`,
+    tools:[JS,HTML,CSS,JQ],
+    imgsrc:'../images/Scheduler_screenshot.png',
+    url:'https://proto133.github.io/Scheduler/',
+    type: 'Solo',
+    featured: false
+}
+// ,{
+//     index:12,
+//     name:'Incomplete',
+//     summary:`TBD`,
+//     tools:[JS, NODE, FB, HTML,CSS, MONGO, EXP, GRAPHQL, HERO, HB, SESS, NPM],
+//     imgsrc:'../images/code.png',
+//     url:'https://peterroto.com',
+//     type: 'Solo',
+//     featured: false
+//}
+]
 
 export default projectData;

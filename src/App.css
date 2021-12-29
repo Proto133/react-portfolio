@@ -5,7 +5,8 @@
   --condiv-flex: 6;
   --fontsize-p: 1.2rem;
   --fontsize-nav: calc(2rem + .06vw);
-  --fontsize-section-title: calc(3rem + .05vw);
+  --fontsize-section-title: calc(2.5rem + .05vw);
+  --fontsize-feat-card-title: calc(2rem + .05vw);
   --typing-font: 3rem;
 }
 
@@ -13,7 +14,6 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   width: 100%;
   height: auto;
@@ -26,42 +26,26 @@ body {
   min-height: 100vh;
 }
 
-#featured{
-  display: flex;
-  flex-flow: row nowrap;
-  justify-content: space-between;
-  overflow-x: scroll;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0, .5);
-}
-.featured--card{
-  flex: 0 0 30%;
-  margin: 0 10rem;
-}
-.feature-frame{
-  overflow-x: hidden;
-  margin: 0;
-  padding: 5% 10%;
-  background-image: url('images/TensorBox357.png');
-  background-repeat:repeat-x;
-}
-
 nav {
   width:100%;
   overflow: hidden;
   background: rgb(119, 119, 119);
-  background: linear-gradient(180deg, rgb(0, 0, 0) 50%, rgba(132, 124, 252, 1) 80%);
+  background: linear-gradient(180deg, rgb(0, 0, 0) 50%,#092c31, #1d5c65E6,#56a9b6CC, #b5f4f51A);
 }
 
-.condiv {
+/* .condiv {
+  margin: 0 20%;
+  height: 70%;
   padding: 100px;
-  background-color: #f4f5f9;
-  flex: var(--condiv-flex);
-}
+  
+  flex: var(--condiv-flex); 
+} */
 
 .home {
-  display: flex;
-  justify-content: center;
+  width:60%;
+  background-color:#ffffffCC;
+   display: flex;
+  justify-content: space-evenly;
   flex-direction: column;
   align-items: center;
 
@@ -69,7 +53,7 @@ nav {
 
 .profilepic {
   border-radius: 50%;
-  width: 200px;
+  width: 400px;
   margin: 30px;
 }
 
@@ -89,6 +73,7 @@ a {
 
 .subtopic {
   margin: 10px 10px 30px 10px !important;
+  color:white;
 }
 
 p {
@@ -103,21 +88,24 @@ p {
   margin: 10px;
 }
 
-.social {
-  position: absolute;
-  margin-top: 20px;
+ .social--container{
+  width:100%;
   display: flex;
-  bottom: 60px;
+  justify-content:center;
+  padding-top:1rem;
+  /* align-items: center; */
+  /* background-color:#888888CC */
 }
-
 .social i {
   padding-right: 30px;
-  font-size: 25px;
-  color: #9a9b9c;
+  font-size: 50px;
+  color: #080808;
 }
 
 .social i:hover {
-  color: #ffffff;
+  color: #b5f4f5;
+  text-shadow: 3px 0 3px rgba(0,0,0,1);
+  transition: all .5s ease-in-out;
 }
 
 .active {
@@ -149,22 +137,6 @@ nav a:hover {
   color: rgb(0, 0, 0);
 }
 
-.social {
-  position: absolute;
-  margin-top: 20px;
-  display: flex;
-  bottom: 60px;
-}
-
-.social i {
-  padding-right: 30px;
-  font-size: 25px;
-  color: #9a9b9c;
-}
-
-.social i:hover {
-  color: #ffffff;
-}
 
 .subtopic {
   margin: 10px 10px 30px 10px !important;
@@ -181,11 +153,25 @@ h4,
 p {
   margin: 10px;
 }
-
-.project-page {
-background-color: #767676;
+.wrapper{
+  display: flex;
+  flex-flow: row wrap;
+  align-items: space-between;
+  justify-content: center;
+  background-image: url('images/TensorBox357.png');
+  background-size: contain;
+  background-repeat:repeat;
+  height: 100vh;
+}
+.project-page{
+  background-image: url('images/TensorBox357.png');
+  background-size: contain;
+  background-repeat:repeat-x;
+/* background-color: #767676; */
   width: auto;
-  /* padding: 3.5rem; */
+  height: 100%;
+  display: flex;
+  flex-flow: column nowrap;
 }
 
 .project-page h2 {
@@ -198,16 +184,19 @@ background-color: #767676;
 }
 
 .project--container {
+  height: 100%;
+  padding: 5rem;
+  flex:1 0 100%;
   margin-top:2rem;
   display: flex;
   flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
   gap: 2rem;
 }
 
 .project-card {
-  flex: 0 0 30%;
-  min-height: 400px;
+  flex: 0 0 20%;
+  max-height: 600px;
   /* max-width: 300px; */
   background: rgba(43, 43, 43, 0.95);
   text-decoration: none;
@@ -221,30 +210,46 @@ background-color: #767676;
   position: relative;
   top: 0;
   transition: all .1s ease-in;
+}
+
+.card-mask:hover {
+  background-color: rgba(0,0,0,.9);
+}
+#normal-projects{
+  width: 95%;
+  margin: 0 2.5%;
+  background-color: rgba(0,0,0,.65);
+  padding: 2rem;
+}
+
+.project-card h2, .featured--card h2{
+  margin:1rem;
+  color:#b5f4f5;
+  text-shadow: 3px 0px 2px rgba(0, 0,0, .9);
+}
+
+.card-mask{
+  background-color: rgba(0, 0, 0, 0.65);
   padding: .5rem;
+  display: flex;
+  flex-flow: column
 }
-
-.project-card h2 {
-  margin-bottom: 0;
-  color:rgba(132, 124, 252, 1)
-}
-
 .project-summary {
   color: white;
   height: 80px;
   overflow-y: auto;
 }
 
+
 .type-shield {
-  width: 25%;
-  margin: 0;
-  float: right;
+ width: 20%;
+  margin: .25rem;
+  float: left;
   text-align: right;
 }
 
 .thumb img {
-  min-width: 250px;
-  max-height: 300px;
+height: 200px;
   width: 100%;
   height: auto;
 }
@@ -252,16 +257,19 @@ background-color: #767676;
 .tools--container {
   margin-top: .5rem;
   bottom: 0;
-  height: 155px;
-  background: rgba(0, 0, 0, 0.5);
+  padding: .5rem;
+  /* height: 155px; */
+  background: rgba(255, 255, 255, 0.85);
 }
 
 .badge-list {
+  margin-top: 1rem;
   display: flex;
   gap: .25rem;
   flex-flow: row wrap;
   justify-content: space-evenly;
   vertical-align: center;
+  padding-bottom: 1rem;
 }
 
 .badge {
@@ -269,8 +277,50 @@ background-color: #767676;
   flex: 0 0 20%;
 }
 
+
+.featured--card{
+  flex: 0 0 5%;
+  margin: 1rem 50rem 1rem 0;
+  height: 350px;
+}
+.featured--card .card-mask{
+  height: 350px;
+  justify-content: space-between;
+}
+.featured--card h2{
+  font-size: var(--fontsize-feat-card-title);
+  margin-bottom: 1rem;
+}
+
+.featured--project--card{
+  max-height: 350px;
+  /* background: rgba(43, 43, 43, 0.95); */
+  text-decoration: none;
+  /* color: #444; */
+  box-shadow: 0 2px 15px rgb(255, 255, 255);
+  display: flex;
+  flex-flow: column nowrap;
+  text-align: center;
+  /* height: 400px; */
+  position: relative;
+  top: 0;
+  transition: all .1s ease-in;
+  /* padding: .5rem; */
+}
+.feature-frame{
+  overflow-x: hidden;
+  margin: 0;
+  padding: 1% 2.5%;
+  max-height: 500px;
+}
+
+.other-frame{
+  margin: 0;
+padding: 1% 0;
+}
+
 .contact-card{
-  background: rgba(255, 255, 255, .95);
+  /* background: #ffffffCC; */
   text-decoration: none;
   color: #444;
   box-shadow: 0 2px 15px rgb(255, 255, 255);
@@ -292,19 +342,34 @@ background-color: #767676;
   text-align: center;
   font-variant: small-caps;
   background-color: lightgrey;
-  box-shadow: 0 2px 5px #66337e
-
+  box-shadow: 0 2px 5px #000000
 } 
+
+.contact-card div i:hover{
+    color:#8e3e26
+  
+}
+
+.aboutMe-wrapper{
+  background-image: url('./images/TensorBox357.png');
+  background-size: contain;
+  height: 100vh;
+}
+.about-content{
+  margin: 0 auto;
+  width:50%;
+  background-color:#ffffffCC
+}
 .contact-card div i{
   font-size:2rem;
   padding:.5rem;
-  color: #f78922;
+  color: #b5f4f5;
 }
 .contact-card div p{
   color: #444;
 }
 
-@media all and (max-width: 450px) {
+@media all and (max-width: 500px) {
   :root {
     --fontsize-nav: 1rem;
     --sidebar-flex: 0;
@@ -316,11 +381,11 @@ background-color: #767676;
     overflow-x:hidden;
   }
 
-  .sidebar {
+  /* .sidebar {
     padding: 30px;
-    background: rgb(238, 103, 143);
+    background: #b5f4f5;
     background: linear-gradient(90deg, rgba(238, 103, 143, 1) 50%, rgba(132, 124, 252, 1) 80%);
-  }
+  } */
 
   .condiv {
     padding: 50px;
@@ -333,6 +398,37 @@ background-color: #767676;
   nav ul li {
     margin: 10px;
   }
+
+
+  .project-page{
+    background-image: url('images/TensorBox357.png');
+    background-size: contain;
+    background-repeat:repeat;
+    overflow: hidden;
+    width: auto;
+    height: 100%;
+    display: flex;
+    flex-flow: column nowrap;
+  }
+
+  .project-card{
+    flex: 0 0 100%;
+  }
+
+#normal-projects{
+  width: 80%;
+}
+  .feature-frame{
+    overflow-x: hidden;
+    margin: 0;
+    padding:0;
+    max-height: 500px;
+  }
+  .other-frame{
+  margin: 0;
+  padding: 0;
+  }
+  
 
   .social {
     left: 0;
